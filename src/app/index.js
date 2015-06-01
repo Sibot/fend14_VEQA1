@@ -7,6 +7,11 @@ angular.module('fend14Veqa1', ['ngAnimate', 'ngTouch', 'ngSanitize', 'restangula
         url: '/',
         templateUrl: 'app/main/main.html',
         controller: 'MainCtrl'
+      })
+      .state('/about', {
+        url: '/about',
+        templateUrl: 'app/about/about.html',
+        controller: 'AboutCtrl'
       });
 
     $urlRouterProvider.otherwise('/');
