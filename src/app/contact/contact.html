@@ -1,0 +1,33 @@
+<div layout="vertical" layout-fill>
+
+  <md-content>
+    <header ng-include="'app/components/navbar/navbar.html'"></header>
+
+    <section class="jumbotron">
+      <h1>Contact me</h1>
+      <p class="lead">
+        Always a pleasure talking to your apps.
+      </p>
+      <p><a class="btn" ng-href="#">Awesome!</a></p>
+    </section>
+
+    <div class="techs" layout-align="center">
+      <md-card ng-repeat="contact in contacts | orderBy:'rank'">
+        <div class="thumbnail">
+          <img class="pull-right" ng-src="assets/images/{{contact.logo}}" alt="{{contact.title}}">
+          <div class="caption">
+            <h3>{{contact.title}}</h3>
+            <p>{{contact.description}}</p>
+            <p><a ng-href="{{contact.url}}">{{contact.url}}</a></p>
+          </div>
+        </div>
+      </md-card>
+    </div>
+    <footer>
+      <md-toolbar layout="row" layout-align="center center">
+        <p>With ♥ from <a href="https://twitter.com/TobAxe">@TobAxe</a></p>
+      </md-toolbar>
+    </footer>
+  </md-content>
+
+</div>
