@@ -22,9 +22,10 @@ html {
 .thumbnail img.pull-right {
   width: 50px;
 }
-
-md-toolbar.md-default-theme {
+md-content.md-default-theme{
   width: 100%;
+}
+md-toolbar.md-default-theme {
   background-color: black;
 }
 
