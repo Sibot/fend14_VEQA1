@@ -1,0 +1,32 @@
+<div layout="vertical" layout-fill>
+
+  <md-content>
+    <header ng-include="'app/components/navbar/navbar.html'"></header>
+
+    <section class="jumbotron">
+      <h1>About Tobias Axelsson</h1>
+      <p class="lead">
+        <img src="assets/images/me.jpg" alt="I'm Tobias"><br>
+        I'm a front end developer, yes I am!
+      </p>
+      <p><a class="btn" ng-href="//www.tobis.se">To my real site!</a></p>
+    </section>
+
+    <div class="techs" layout-align="center">
+      <md-card ng-repeat="skill in skills | orderBy:'rank'">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>{{skill.title}}</h3>
+            <p>{{skill.description}}</p>
+          </div>
+        </div>
+      </md-card>
+    </div>
+    <footer>
+      <md-toolbar layout="row" layout-align="center center">
+        <p>With ♥ from <a href="//twitter.com/TobAxe">@TobAxe</a></p>
+      </md-toolbar>
+    </footer>
+  </md-content>
+
+</div>
