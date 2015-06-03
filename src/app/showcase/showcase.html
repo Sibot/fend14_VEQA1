@@ -1,0 +1,31 @@
+<div layout="vertical" layout-fill>
+
+  <md-content>
+    <header ng-include="'app/components/navbar/navbar.html'"></header>
+
+    <section class="jumbotron">
+      <h1>Showcase!</h1>
+      <p class="lead">
+        Always a pleasure showing you my apps.
+      </p>
+    </section>
+
+    <div class="techs" layout-align="center">
+      <md-card ng-repeat="item in showcase | orderBy:'rank'">
+        <div class="thumbnail">
+          <div class="caption">
+            <h3>{{item.title}}</h3>
+            <p>{{item.description}}</p>
+            <p><a ng-href="{{item.url}}">{{item.url}}</a></p>
+          </div>
+        </div>
+      </md-card>
+    </div>
+    <footer>
+      <md-toolbar layout="row" layout-align="center center">
+        <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+      </md-toolbar>
+    </footer>
+  </md-content>
+
+</div>
